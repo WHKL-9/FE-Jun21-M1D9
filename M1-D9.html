@@ -10,6 +10,21 @@
         - Create a USER BOARD with 24 randomized numbers that highlights as the main board does
         - Let the user choose HOW MANY user boards he's willing to play with and create them.
     -->
-  <head></head>
-  <body></body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <header>
+      <h2>Bingo Board</h2>
+    </header>
+    <div class="board">
+      <button onclick="generateBingoBoard()">Start Playing</button>
+      <br/><br/>
+
+    </div>
+    <div id="number-container">
+      <!-- going to dynamically create the number here -->
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
