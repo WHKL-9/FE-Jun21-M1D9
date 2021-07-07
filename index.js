@@ -34,11 +34,11 @@ const generateBingoBoard = function () {
 }
 
 //to generate random number between 1-76
-const randomNumberGenerator = function(minNumber, maxNumber){
-    minNumber = Math.floor(minNumber)
-    maxNumber = Math.floor(maxNumber)
-    return Math.floor(Math.random() * (maxNumber - minNumber) + minNumber); //The maximum is exclusive and the minimum is inclusive
-}
+// const randomNumberGenerator = function(minNumber, maxNumber){
+//     minNumber = Math.floor(minNumber)
+//     maxNumber = Math.floor(maxNumber)
+//     return Math.floor(Math.random() * (maxNumber - minNumber) + minNumber); //The maximum is exclusive and the minimum is inclusive
+// }
 //get random Button and highlight on the board if random number generated
 //is equal to number on the board 
 const randomBtn = document.getElementById('getRandom')
@@ -50,6 +50,7 @@ randomBtn.addEventListener('click', function(){
     let aldreadyGeneratedNumbers = document.querySelectorAll(".cell")
     for (let cell of aldreadyGeneratedNumbers){
             if((parseInt(cell.innerText) ===random) && !cell.classList.contains("highlightedCell")){
+                //we got to parse the text as integer! 
                 cell.classList.add("highlightedCell")
             }
         }
